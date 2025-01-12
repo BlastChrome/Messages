@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightgray;
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  color: white;
+}
+.message {
+  background-color: rgba(0, 0, 0, 0.574);
+  width: 100%;
+  max-width: fit-content;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  font-size: 20px;
+  right: 20px;
+  bottom: 0;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.125s ease-in-out, opacity 0.125s ease-in-out;
+}
+
+.message.show-in {
+  transform: translateY(-20%);
+  opacity: 1;
+}
+
+.message.show-out {
+  transform: translateY(100%);
+  opacity: 0;
+}
