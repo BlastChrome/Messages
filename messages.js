@@ -1,40 +1,3 @@
-// (function () {
-//   const message = document.createElement("div");
-//   message.classList.add("message");
-//   document.body.appendChild(message);
-
-//   // Create a <link> element to link to the CSS file
-//   let link = document.createElement("link");
-
-//   // Set the attributes for the <link> element
-//   link.rel = "stylesheet";
-//   link.href = "https://blastchrome.github.io/Messages/messages.css"; // CDN URL for Bootstrap
-
-//   // Append the <link> element to the <head> of the document
-//   document.head.appendChild(link);
-
-//   showMessage(80000, "Script Loaded");
-
-//   function showMessage(time, text) {
-//     if (message.classList.contains("show-out")) {
-//       message.classList.remove("show-out");
-//     }
-//     //update the message
-//     message.innerHTML = text;
-//     // animate the message in
-//     message.classList.add("show-in");
-//     // after a certain amount of time, add show out
-//     setTimeout(hideMessage, time);
-//   }
-
-//   function hideMessage() {
-//     if (message.classList.contains("show-in")) {
-//       message.classList.remove("show-in");
-//     }
-//     message.classList.add("show-out");
-//   }
-// })();
-
 class UIMessage {
   constructor() {
     this.init();
@@ -76,6 +39,3 @@ class UIMessage {
     setTimeout(this.hideMessage.bind(this), duration);
   }
 }
-
-const message = new UIMessage();
-message.showMessage("test");
